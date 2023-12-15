@@ -1,16 +1,14 @@
-
-
 Pod::Spec.new do |s|
 
 
-  s.name         = "YBImageBrowserFix"
+  s.name         = "YBImageBrowser"
 
-  s.version      = "4.0.0"
+  s.version      = "3.0.9"
 
   s.summary      = "iOS image browser / iOS 图片浏览器"
 
   s.description  = <<-DESC
-  					iOS 图片浏览器，功能强大，易于拓展，极致的性能优化和严格的内存控制让其运行更加的流畅和稳健。
+            iOS 图片浏览器，功能强大，易于拓展，极致的性能优化和严格的内存控制让其运行更加的流畅和稳健。
                    DESC
 
   s.homepage     = "https://github.com/indulgeIn"
@@ -21,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/ijeffery3/YBImageBrowser.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/indulgeIn/YBImageBrowser.git", :tag => "#{s.version}" }
 
   s.requires_arc = true
 
@@ -31,7 +29,7 @@ Pod::Spec.new do |s|
     core.source_files   = "YBImageBrowser/**/*.{h,m}"
     core.resources      = "YBImageBrowser/YBImageBrowser.bundle"
     core.dependency 'YYImage'
-    core.dependency 'SDWebImage', 
+    core.dependency 'SDWebImage', '>= 5.0.0'
   end
   s.subspec "NOSD" do |core|
     core.source_files   = "YBImageBrowser/**/*.{h,m}"
